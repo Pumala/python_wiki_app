@@ -1,0 +1,17 @@
+{% extends 'homepage.html' %}
+
+{% block body %}
+<h1>{{page_name}}</h1>
+{% if is_available %}
+  <p>
+    Is not available!!!
+    <a href="/{{page_name}}/edit">Create a New Page</a>
+  </p>
+{% else %}
+  <p>
+    {{wiki_page.content}}
+    <a href="/{{page_name}}/edit">Edit this page</a>
+  </p>
+{% endif %}
+
+{% endblock %}
