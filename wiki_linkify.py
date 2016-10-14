@@ -1,3 +1,5 @@
+import re
+
 def _replace(word):
     return '<a href="/%s">%s</a>' % (word.group(0), word.group(0))
 

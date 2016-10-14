@@ -9,8 +9,10 @@
   </p>
 {% else %}
   <p>
-    {{wiki_page.content}}
+      {{content | safe}}
+
     <a href="/{{page_name}}/edit">Edit this page</a>
+    <a href="/{{page_name}}/hist">See page history</a>
   </p>
 {% endif %}
 

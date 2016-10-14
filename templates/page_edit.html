@@ -10,10 +10,9 @@
         Content not available!!!
       </p>
     {% else %}
-    <textarea name="content" rows="8" cols="40">
-      {{wiki_page.content}}
-    </textarea>
+    <textarea name="content" rows="8" cols="40">{{content | safe}}</textarea>
     {% endif %}
   <button type="submit" name="save">Save</button>
+
 </form>
 {% endblock %}
